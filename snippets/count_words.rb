@@ -1,10 +1,11 @@
 def count_words(text)
-  counts = Hash.new
+  counts = {}
   text.split.each do |word|
-    if counts[word.to_sym]
-      counts[wrd] += 1
+    sym = word.to_sym
+    if counts[sym]
+      counts[sym] += 1
     else
-      counts[word] = 1
+      counts[sym] = 1
     end
   end
 
