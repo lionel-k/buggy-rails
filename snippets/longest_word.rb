@@ -1,6 +1,7 @@
 def longest_word(sentence)
-  longest = sentence.split
-  longest.sort_by!(&:length).reverse!
-
-  longest[0]
+  longest = ''
+  sentence.split.each do |word|
+    longest = word if word.length > longest.length
+  end
+  longest
 end
